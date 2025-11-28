@@ -1,0 +1,7 @@
+{
+  "name": "PayFlex",
+  "description": "A fully functional digital wallet and money transfer app featuring dashboard, transaction history, card management, and secure money transfers.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
