@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Send Money</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7f13ec",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191022",
+              "text-light": "#140d1b",
+              "text-dark": "#f7f6f8",
+              "text-secondary-light": "#734c9a",
+              "text-secondary-dark": "#a8a2b0",
+              "ui-element-light": "#ede7f3",
+              "ui-element-dark": "#2a2234",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<button class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center justify-center -ml-3">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Send Money</h1>
+<div class="w-12 h-12 shrink-0"></div> <!-- Spacer for centering -->
+</header>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-text-secondary-light dark:text-text-secondary-dark flex border-none bg-ui-element-light dark:bg-ui-element-dark items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-ui-element-light dark:bg-ui-element-dark h-full placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark px-4 pl-2 text-base font-normal leading-normal" placeholder="Search contacts or enter number" value=""/>
+</div>
+</label>
+</div>
+<!-- Section Header -->
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Recent</h2>
+<!-- Contact List -->
+<div class="flex flex-col px-2">
+<!-- List Item 1 -->
+<div class="flex items-center gap-4 bg-transparent px-2 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Aliah Lane" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAGr9xToDwPozmHjEadkrnF5hK1S4Wd9bAxaZbKU-0MMi0hGAHcwTog5WGM9i9y_BqaAgV7YEbmlUkO5dbFKJ1bAfPT9Um6aPs_qdmBd5doiLJNH7MRI5R508dxE_cl-YItWniO1knLCwdkbVbBKMhJ5RLVdLkAy9B0NHn9u19kvFpKaSeKHQxNDVCI1uVKJXjB5cXrDVbJfhycEnLpvURcx1mSEmldpaTJN-eh6lGSZPQVR5zVIN7fapW9M9Yb_DqvsE-ETa7WgOh");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Aliah Lane</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">@aliahlane</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-text-light dark:text-text-dark flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-4 bg-transparent px-2 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of John Appleseed" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDH4tjUFv7anJP_coaY8dBssP8DUdXLcSWPlrq3w8Jhywuf3AaV9HhyULfBkOSbofk_8F6pu058wP2WP82tU6uiaNyRX-gzDdNwuuwF6TXaeVrQjRF3qht8nXHicsm7hPaXRGAwVCfQV473r2ciyLLib9IlsuWSJ7Ee4hndxRDi0n8mNPMCqfb1eWg0cPWnWpz_EhTGqf92K1CyWGA6JX_ogMquBF7HSAsECknNkZIve70MMQgHvFKz9cxqTRRYKIfQZBrEwu_QxHDc");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">John Appleseed</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">(123) 456-7890</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-text-light dark:text-text-dark flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-4 bg-transparent px-2 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Maya Rao" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZV3Kcm_3qR38IgTmgv1EZcCen-EvERG1BjiQcg_ueZlTWZNq3_p73EsTkau6-iU2DArdMuIG77yI3FZxMMD6YXmns9fg0Tdl2qltOw_18sy_nUEquxtv6eREKrXgpQLu23tfm_2tZYiKFQWLLD7GjryVHPUOeZtVp76N0BDyvhd_0GwzmJTMdh7TvJPPO3Z8v7fOBZ0HKidq6jGk8E4r4jDhYSRxPHxWilGzxqfIKEKKcgbIIh85t5yXuMUzBf-dJ7XqCQD909Ua_");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Maya Rao</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">@mayarao</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-text-light dark:text-text-dark flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="flex items-center gap-4 bg-transparent px-2 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Kenji Tanaka" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdpmqXJ-BhLMbRgKmMziT6uAG3qzBnvoGmHhoTLuWxTi0XTptAScMNdcpCpKbomQcNf3ZnAruFo28kG__cZ-nFLp1XFbcnQF9SzwdLApesCZe8ho7WvF8nu2fYU1p6EzC7cacinpw8z9jK222-_ult-97xgdixRy1D2BoB97dqk1kMO1PMIR-znyBAZsvVPMSTKVzqjyiTqPy_grULkSMbZlRDV7pqPb_hq4n3ZQuv4nixer5JCD1jZG2J4ubo7OhU_2HJhaXD84mp");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Kenji Tanaka</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">(555) 123-9876</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="text-text-light dark:text-text-dark flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined text-4xl">add</span>
+</button>
+</div>
+</body></html>

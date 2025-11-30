@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Transactions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#007AFF",
+              "background-light": "#F8F9FA",
+              "background-dark": "#102216",
+              "green-positive": "#14B8A6",
+              "red-negative": "#EF4444"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="flex-grow pb-28">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+</div>
+<h2 class="text-[#212529] dark:text-background-light text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Transactions</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-[#212529] dark:text-background-light gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<div class="flex justify-center py-3">
+<span class="material-symbols-outlined text-gray-400">arrow_downward</span>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-[#6C757D] flex border-none bg-white dark:bg-zinc-800 items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-[#212529] dark:text-background-light focus:outline-0 focus:ring-0 border-none bg-white dark:bg-zinc-800 focus:border-none h-full placeholder:text-[#6C757D] px-4 text-base font-normal leading-normal" placeholder="Search transactions" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-4 px-4 mt-4">
+<div>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-semibold mb-3 px-1">Today</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between bg-white dark:bg-zinc-800 p-3 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Jane Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmNznjdbBg8HOhV413-ryvXZgY8l2_p7lpsNDBIqCQygXwtaMa45DnNLGvIloBtYxHoLjoDgRHSxwV_UsUEiOWPf5CB3Ar2jMSG2qbdcZe0-SOUiTx0ZHhqkB8WPShZQwzfsmp_ybqCBpfy5gxyXaprhS_tpqO3RQXb9gP1QsqK433KFVDAuLYWIj_97tScvA1EMvp82cTK8jAOqHkNNzd5SLwgre5YlCIFnyqpW5__c1ILFh4EtRgFzNb_7eGk8vi_SIQ-zyt2prl");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#212529] dark:text-background-light text-base font-medium leading-normal line-clamp-1">Jane Doe</p>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">10:45 AM</p>
+</div>
+</div>
+<p class="text-green-positive text-base font-semibold leading-normal">+$50.00</p>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-semibold mb-3 px-1">Yesterday</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between bg-white dark:bg-zinc-800 p-3 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of John Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARGOqKekv_2emGefZxK7oo9Tu01rpLBKRyAR741o52Kr_VKKfBJTK9X7Y1fTam_-4plsDRi7zJLiPrgjtGh7ilDAh2Dqu84zZ8HWUIOtViA5X6VCW3ix0pHVBmMeN1wosP28gnSLi2vK3_1fMuM0w-sGKvs5betwEna8f8Bx6V_npXXfmv3GNLFN4UkLr9BoVvfyU0vs-_K9F6u_dyuKioXF7bID1xz3vGFsG43WcNPQpYAW9G4OPAdLISlMMZSndTWww7zNgXc9fk");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#212529] dark:text-background-light text-base font-medium leading-normal line-clamp-1">John Smith</p>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">3:20 PM</p>
+</div>
+</div>
+<p class="text-red-negative text-base font-semibold leading-normal">-$25.50</p>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-semibold mb-3 px-1">This Week</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between bg-white dark:bg-zinc-800 p-3 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 dark:bg-gray-700" data-alt="Icon for a Coffee Shop">
+<span class="material-symbols-outlined text-[#6C757D]">local_cafe</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#212529] dark:text-background-light text-base font-medium leading-normal line-clamp-1">Coffee Shop</p>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Oct 28</p>
+</div>
+</div>
+<p class="text-red-negative text-base font-semibold leading-normal">-$5.00</p>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-zinc-800 p-3 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 flex items-center justify-center bg-gray-200 dark:bg-gray-700" data-alt="Icon for a utility bill">
+<span class="material-symbols-outlined text-[#6C757D]">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#212529] dark:text-background-light text-base font-medium leading-normal line-clamp-1">Utility Bill</p>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Oct 27</p>
+</div>
+</div>
+<p class="text-red-negative text-base font-semibold leading-normal">-$120.75</p>
+</div>
+<div class="flex items-center justify-between bg-white dark:bg-zinc-800 p-3 rounded-lg">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Emily White" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChxZNu39wH72pxHjdhmS8rtOgTAYstp9H81Ko0eIWwm6BAZXliTgaTF4BcNY3mH89hfYdHGjPHX51dhLNVgALO0qX9rNp57uITYzSiXPp6DUagylwMMizkZbPvh9mU07O1VbE07TrTYGrTTGIaRkh52OBeKxCpAiQ0NNktBI-0FG0hWK7lrHUjg4ISa4OgsrXGMmjY62yTczzx0iQW4HhiWQI0QTOFMWdSSU5fkJfQOL5iL6AQ4rmMjmjuJQd5KPbJ06Xwd6ho7FSO");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#212529] dark:text-background-light text-base font-medium leading-normal line-clamp-1">Emily White</p>
+<p class="text-[#6C757D] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Oct 26</p>
+</div>
+</div>
+<p class="text-green-positive text-base font-semibold leading-normal">+$250.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-around h-20 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg fixed bottom-0 left-0 right-0 z-20 border-t border-gray-200 dark:border-zinc-800">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-xs font-medium">Cards</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="text-xs font-medium">Transfer</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+
+</body></html>

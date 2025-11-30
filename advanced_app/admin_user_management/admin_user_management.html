@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin User Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-10 w-full bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white flex-1">All Users</h1>
+<div class="flex items-center space-x-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-gray-400 dark:text-gray-500 flex border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-inset focus:ring-primary border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-full placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 border-l-0 text-base font-normal leading-normal" placeholder="Search by name or email..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 px-4 pb-3 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-primary/20 text-primary pl-3 pr-2">
+<p class="text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 pl-3 pr-2">
+<p class="text-sm font-medium leading-normal">Active</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 pl-3 pr-2">
+<p class="text-sm font-medium leading-normal">Suspended</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 pl-3 pr-2">
+<p class="text-sm font-medium leading-normal">Verified</p>
+</button>
+</div>
+<!-- User List Section -->
+<div class="flex-1 px-4 space-y-3">
+<!-- Table Header -->
+<div class="flex justify-between items-center py-2 text-xs font-semibold uppercase text-gray-400 dark:text-gray-500">
+<span>User</span>
+<div class="flex items-center space-x-10">
+<span class="w-20 text-right">Balance</span>
+<span class="w-20 text-center">Status</span>
+<span class="w-6 text-right"></span>
+</div>
+</div>
+<!-- User Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 p-3 rounded-xl shadow-sm min-h-[72px]">
+<div class="flex items-center gap-4 flex-1">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Wade Warren" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGcH7hZ6ENMKtIbj3ZCd861k7Exf4xFr6Afm5EB-MUf4r4tYnzoV1-KaCdraPbB1c58vBMwdNhBLTTt8zUCmhsw2ts6pd80vGLrIp7-zR-N3-a3dgeJvqt4zxoUj6BXUQ3MuJMa6pBfw9OIvp3nBgUEGrk6XQAOssVlCpPl7fLlBnjrn8F0iIkxQzHrByPWHkoinMR4Y72DmlZUZRy3PO1TYHMsnnnnH3ngJwchH6hVgWQO9vpD4MlqdAzxUc9DakxGzzX1YwH-cm0"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Wade Warren</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">wade.w@example.com</p>
+</div>
+</div>
+<div class="flex items-center shrink-0 space-x-3">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right w-20">$1,450.00</p>
+<div class="flex justify-center w-20">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-300">Active</span>
+</div>
+<button class="shrink-0 text-gray-500 dark:text-gray-400 h-8 w-8 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- User Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 p-3 rounded-xl shadow-sm min-h-[72px]">
+<div class="flex items-center gap-4 flex-1">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Eleanor Pena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgYZqurRDeiAWvPTGpQOht3-umxRhgv2mraPS71K67XjS2uT0guzIc5f_VTdbPjxAq4uHIWxgV-p_G36jjV60NoaOJH659t__Pl-jlqWiEhA1I5naeASKc6mAE2puk_lFJo8umGEl1k3AH_T0vONIamEVW1zeOc9H2e8-fhqHjkt_x55bRe5vxrBq9Q5C8ym8ETtYk3QH1xknXzDtWq6OFYvk9070tCHY4gZvswHDimmSoiilQxq9XlWTcR9u2XHvmEXvnbSWI28ra"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Eleanor Pena</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">eleanor@example.com</p>
+</div>
+</div>
+<div class="flex items-center shrink-0 space-x-3">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right w-20">$250.75</p>
+<div class="flex justify-center w-20">
+<span class="inline-flex items-center rounded-full bg-yellow-100 dark:bg-yellow-900/50 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:text-yellow-300">Suspended</span>
+</div>
+<button class="shrink-0 text-gray-500 dark:text-gray-400 h-8 w-8 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- User Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 p-3 rounded-xl shadow-sm min-h-[72px]">
+<div class="flex items-center gap-4 flex-1">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Robert Fox" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Z-5hArmdyt1-j0lWNZIHWu_rk2TgdltFrLN8SkAb5sqhmizsLaYPwBWZ8ykCHyytQ4qPpvtEytAwPIccJlEvyZNjdHev2fW1mhExg29ciGpS7D3HQDbMaqBKeUM0cEBJO1e6u8rupG0FDPzPyzmEuxpuq68AyyNyp-VwUmUsM2NHoxJaZp4Ecslk9HCVzismcLSjRw0-2XEU3kkAg1dg2RFDr2sHBBUksvkKI8Q9yS-ND-dHkEk5VtcFUH2f7tTbvLzv4ee8UiXb"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Robert Fox</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">robert.f@example.com</p>
+</div>
+</div>
+<div class="flex items-center shrink-0 space-x-3">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right w-20">$5,120.00</p>
+<div class="flex justify-center w-20">
+<span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:text-blue-300">Verified</span>
+</div>
+<button class="shrink-0 text-gray-500 dark:text-gray-400 h-8 w-8 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- User Item 4 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 p-3 rounded-xl shadow-sm min-h-[72px]">
+<div class="flex items-center gap-4 flex-1">
+<img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Jane Cooper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBII95eKlQ35j0EEWscdC739Vgh2bFpEf6TKev2NAon1rbzCppLBjv0_0xwMgF0tDTlc1urUyvfE8YB_OIxBVTlouhNPsy55LdSSVdTTQhSv5yumqLtc-DDMLzcJm96aZpyUkJLdhiBbj8GjG0AJvEDD7BM8ToMCyluVOpZjq4FphYwW-H6IKXsS6K2anl5w5gU2Zwt0gxqILHRzklIHm5jnqR3i-BNvxr-hSKw_SOSGQmgJKB8k4NbwVU6-jNqPDF9IeGYd1psv9Mz"/>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Jane Cooper</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">j.cooper@example.com</p>
+</div>
+</div>
+<div class="flex items-center shrink-0 space-x-3">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right w-20">$0.00</p>
+<div class="flex justify-center w-20">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-300">Active</span>
+</div>
+<button class="shrink-0 text-gray-500 dark:text-gray-400 h-8 w-8 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between px-4 py-6 text-sm text-gray-500 dark:text-gray-400">
+<button class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+                Previous
+            </button>
+<p>Page 1 of 10</p>
+<button class="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                Next
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

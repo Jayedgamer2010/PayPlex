@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Cards - Digital Wallet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3B82F6", // Professional dark blue
+              "accent": "#14B8A6", // Teal
+              "background-light": "#F5F5F7",
+              "background-dark": "#111827",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1F2937",
+              "text-primary-light": "#111827",
+              "text-primary-dark": "#F9FAFB",
+              "text-secondary-light": "#6B7280",
+              "text-secondary-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden max-w-md mx-auto">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<!-- Back Arrow Placeholder -->
+</div>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Cards</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-primary-light dark:text-text-primary-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">settings</span>
+</button>
+</div>
+</div>
+<!-- Virtual Card -->
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-gradient-to-br from-blue-500 to-teal-400 text-white p-6 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
+<div class="absolute -bottom-12 -left-8 w-28 h-28 bg-white/10 rounded-full"></div>
+<div class="flex justify-between items-start mb-6">
+<p class="font-bold text-lg">Virtual Card</p>
+<img class="h-6" data-alt="Visa Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvcfVTxZyh2kUyCOxP1plXJfs5-39OMyjoinspba9y_yJx-dN42B3mI_P4qAB_sUX8BXmdXlgvzxvZO8cq4o2TRRuCcctxvLDA-wo3ccS1UpAGg0g_kq0OfH0-73krw8ZB8nB5WBCP5Mg7cgdUe1HZ7pjTkVPRpU4QtU6GNWSxS3RhrvxzetQl5DZwIULQpegJRL_KAJJH62saj8Wp7h7yE-X0Q2sg25saJlPAp6el2uceh0gpzR6l-VUqiOctLsb_5ZVgB0X4dW3c"/>
+</div>
+<p aria-label="Card Number" class="text-2xl font-mono tracking-widest mb-6">**** **** **** 1234</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-sm font-normal leading-normal text-white/80">Cardholder Name</p>
+<p class="text-base font-medium leading-normal">Jane Doe</p>
+</div>
+<div class="flex flex-col gap-1 text-right">
+<p class="text-sm font-normal leading-normal text-white/80">Expires</p>
+<p class="text-base font-medium leading-normal">08/26</p>
+</div>
+</div>
+<div class="mt-4 border-t border-white/20 pt-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+<span class="truncate text-sm font-medium">Show Details</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-white/30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Add New Card Button -->
+<div class="flex px-4 py-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-white gap-2 pl-5 text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors">
+<span class="material-symbols-outlined">add_card</span>
+<span class="truncate">Add New Card</span>
+</button>
+</div>
+<!-- Section Header for Linked Cards -->
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Linked Physical Cards</h3>
+<!-- List of Cards -->
+<div class="flex flex-col gap-2 px-4 pb-4">
+<!-- List Item 1 -->
+<div class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-contain rounded-lg size-12 flex items-center justify-center">
+<img class="h-8" data-alt="Chase Bank Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6YiYEiB5aaCWGKN5ihhPF3W-okN5AlXDvfyE22a9TfH7SBuDFL8mLlIfEEqbd9caq8_TlbM9cTPrwrwD4fPoWmPizaZpfByV5wbsoYgbrqTnTaoeHQllTJjh3TDlgV8DB9R9QwQTPWRXhVGDS_lzy8kwwSGbHZ5mm5kJgozUjIObnt4jbfnmdBaECwFaKit23Y77SqFVQvIL4wiv2OpXsBmFZ5YZWJEoyPcg1FzkyVwGQK7sVIU8gkpsPOO8U_3jCWwjEehNIk2Q"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Platinum Rewards</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">**** 5678</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex size-9 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">more_vert</span>
+</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-contain rounded-lg size-12 flex items-center justify-center">
+<img class="h-8" data-alt="American Express Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtQCSZCaB4pAPw6m7w3GXb1GpBfPP5ZVqLjdSgFMN1B60cT2OO6szhI9ZZz9cNsQkqMjilnL--ffz0GuRzS-NeggtgT0DlPlkzrC55hDkpGQMAArPf6SUBVpFF-p6pjdJa5m_MGksCtiDnkpb5eLCytxvhLHjAxLmUtfNjj20uWEcE-W9xY2413tYozaWC_iiNXGrlvMat30v2rk1lJuq6HNQCcji1EfWLQ9xfGXQIIeiTvzY7o_ljXRc2U9n0q6FwbSZrE6c4pmHi"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Gold Card</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">**** 9012</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex size-9 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">more_vert</span>
+</button>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg shadow-sm">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-contain rounded-lg size-12 flex items-center justify-center bg-[#1a1a1a] p-2">
+<img class="h-8" data-alt="Mastercard Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDio2xs3PP3sJlHxugTZl2evf53gYGBprCpiJ9kJciE0PGV05QKMe9klMHb4FuzW37dCFKvT_aH4pKbgc6ZepRdGZapCjbuSN2M7WovASM-BUvd8HqlxBmtmyalh32-YJZog3GoCXsO7cqvIWs4pTGqYmfh7EVDR__ktL1UVr3dGLyTygHcPEHGV9Pl9JIRqVX6ZjjAmkYi1U61WrDOTBa4zezGGkTRnOzAxKBzLsL5LVgrqsBQhvJERevALgtHyLKBKg9_fID6p973"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Digital Debit</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">**** 3456</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex size-9 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="h-5"></div>
+</div>
+</body></html>

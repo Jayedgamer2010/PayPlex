@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Wallet Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7C3AED",
+              "background-light": "#F8F9FA",
+              "background-dark": "#191022",
+              "text-light-primary": "#212529",
+              "text-light-secondary": "#6C757D",
+              "text-dark-primary": "#F8F9FA",
+              "text-dark-secondary": "#9CA3AF",
+              "card-light": "#FFFFFF",
+              "card-dark": "#211A29",
+              "border-light": "#E5E7EB",
+              "border-dark": "#374151"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+      .material-symbols-outlined.filled {
+        font-variation-settings: 'FILL' 1;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 shrink-0">
+<img class="aspect-square w-full rounded-full object-cover" data-alt="User profile picture of a man with glasses smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFsvcobZwon2014KOpRaxys0laNXV1eseOX1g-nvV5ASwrqxy0dGpl-EaLtDcGFYZGI834w4r03buZwAdZsB99zYHhF5gNlehdkhp9vi48XI7_vPDkhC_CMIUVCsWz_t5BKrcgmuM61Z8QgSITkt_pL06nvjrZJimwxL56L8JCP_2RCS0oCg9tLUfv9YsdrXg9S91ZET4_yQf5bcA2m7zhPY-8PEhQxTzHyUuECz2Hu0wnrIX3jQUpXs5VRddi2ShCzPfcSfprCt9K"/>
+</div>
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-xl font-bold leading-tight tracking-tight">Hello, Jayed</h1>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-full text-text-light-primary dark:text-text-dark-primary">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</div>
+<!-- Balance Card -->
+<div class="p-4">
+<div class="flex flex-col items-start justify-end rounded-xl bg-gradient-to-br from-primary to-[#a855f7] p-6 shadow-lg">
+<div class="flex w-full items-center justify-between">
+<p class="text-sm font-medium text-white/80">Current Balance</p>
+<button class="text-white/80">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</button>
+</div>
+<p class="text-4xl font-bold leading-tight tracking-tighter text-white mt-2">$1,234.56</p>
+</div>
+</div>
+<!-- Quick Actions Grid -->
+<div class="grid grid-cols-4 gap-4 p-4">
+<div class="flex flex-col items-center gap-2">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl">arrow_upward</span>
+</div>
+<h2 class="text-center text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Send Money</h2>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl">arrow_downward</span>
+</div>
+<h2 class="text-center text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Request</h2>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl">qr_code_scanner</span>
+</div>
+<h2 class="text-center text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Scan QR</h2>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl">add_card</span>
+</div>
+<h2 class="text-center text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Top Up</h2>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pb-3 pt-5">
+<h2 class="text-lg font-bold leading-tight tracking-tight text-text-light-primary dark:text-text-dark-primary">Recent Transactions</h2>
+<a class="text-sm font-bold text-primary" href="#">See All</a>
+</div>
+<!-- Transactions List -->
+<div class="flex flex-col px-4 space-y-2">
+<div class="flex items-center gap-4 rounded-lg bg-card-light dark:bg-card-dark p-3 min-h-[72px]">
+<div class="shrink-0">
+<img class="aspect-square size-12 rounded-full object-cover" data-alt="Profile picture of Sarah Miller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgEpk6hF7J6Je3SZkJIJoPbcFgh8vxkGdlKo_tdp0r2jbd4KeHbi5K6QjYEme2Z3HEWaZ8liHYlRC2_u_QuWJDdS4mH8P_o4wXtcpkvNsbqVcxtuDZ_519reLDRmGr7z3OOjNWWQ8PuFQ7tZb5YplTrZrV5VLCR5J8oxv7QfWzosMWOqiIF70aHSa8m1_JMPeNZi0SKaV4BG8vH0hFHHV16iLH_LIyURkPoKBTQCIBDr1Rc0xserEhUeI7TiweQU5bzGdu3X0tK8uR"/>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary line-clamp-1">Sarah Miller</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary line-clamp-1">Payment Received</p>
+</div>
+<div class="shrink-0">
+<p class="text-base font-bold leading-normal text-green-600 dark:text-green-500">+$250.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-card-light dark:bg-card-dark p-3 min-h-[72px]">
+<div class="shrink-0 flex items-center justify-center size-12 rounded-full bg-red-100 dark:bg-red-900/50">
+<span class="material-symbols-outlined text-red-500 dark:text-red-400 text-2xl">shopping_bag</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary line-clamp-1">Apple Store</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary line-clamp-1">Shopping</p>
+</div>
+<div class="shrink-0">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary">-$999.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-card-light dark:bg-card-dark p-3 min-h-[72px]">
+<div class="shrink-0">
+<img class="aspect-square size-12 rounded-full object-cover" data-alt="Profile picture of John Doe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7pfwvTL6ivq8O6CMWrR8TdQ8zT-o7YtuqAFpZxYV2aUnzKF8qfr-DZnyiJxrYuTtEpG8QvGEGNDrfe3Ox1OLvQ2paU2E6qN1XFpnyIV_jKmQTJbsj7wWolAbDGt8yp_cM8-xH7TPbdHU1ql8S6dms8LkvYDkmFbAffwnM-zC8ICm11q9mZG91SMG_I4pJfap19TK9o9QexukLL2WIdh0YvVgvNWMd3EA9ClfBPVKwWP_5UlDj5nVxvyyGeS8tZsY6G2vrF0dhoVl_"/>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary line-clamp-1">John Doe</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary line-clamp-1">Payment Sent</p>
+</div>
+<div class="shrink-0">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary">-$42.50</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-card-light dark:bg-card-dark p-3 min-h-[72px]">
+<div class="shrink-0 flex items-center justify-center size-12 rounded-full bg-blue-100 dark:bg-blue-900/50">
+<span class="material-symbols-outlined text-blue-500 dark:text-blue-400 text-2xl">movie</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary line-clamp-1">Netflix</p>
+<p class="text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary line-clamp-1">Subscription</p>
+</div>
+<div class="shrink-0">
+<p class="text-base font-bold leading-normal text-text-light-primary dark:text-text-dark-primary">-$15.99</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-10 mx-auto max-w-md">
+<div class="flex items-center justify-around border-t border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 px-2 py-3 backdrop-blur-md">
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled text-2xl">home</span>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">credit_card</span>
+<span class="text-xs font-medium">Cards</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+<span class="text-xs font-medium">Analytics</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Analytics Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400,FILL@0..1" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7f13ec",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191022",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Analytics Dashboard</h1>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 dark:text-[#ad92c9]">calendar_today</span>
+<p class="text-slate-500 dark:text-[#ad92c9] text-base font-bold leading-normal tracking-[0.015em] shrink-0">Last 30 Days</p>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-[#20152d] p-4 border border-slate-200 dark:border-[#4d3267]">
+<p class="text-slate-600 dark:text-white text-base font-medium leading-normal">Revenue Today</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">$15,230</p>
+<p class="text-[#0bda73] text-base font-medium leading-normal">+2.5%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-[#20152d] p-4 border border-slate-200 dark:border-[#4d3267]">
+<p class="text-slate-600 dark:text-white text-base font-medium leading-normal">New Users</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">214</p>
+<p class="text-[#0bda73] text-base font-medium leading-normal">+1.8%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-[#20152d] p-4 border border-slate-200 dark:border-[#4d3267]">
+<p class="text-slate-600 dark:text-white text-base font-medium leading-normal">Transaction Success</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">99.2%</p>
+<p class="text-[#fa6f38] text-base font-medium leading-normal">-0.1%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-[#20152d] p-4 border border-slate-200 dark:border-[#4d3267]">
+<p class="text-slate-600 dark:text-white text-base font-medium leading-normal">Avg. Transaction</p>
+<p class="text-slate-900 dark:text-white tracking-light text-2xl font-bold leading-tight">$45.60</p>
+<p class="text-[#0bda73] text-base font-medium leading-normal">+0.5%</p>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="flex flex-col gap-4 px-4 py-2">
+<!-- Revenue Trends Chart -->
+<div class="flex w-full flex-col gap-2 rounded-xl border border-slate-200 dark:border-[#4d3267] bg-white dark:bg-[#20152d] p-6">
+<p class="text-slate-800 dark:text-white text-base font-medium leading-normal">Revenue Trends</p>
+<p class="text-slate-900 dark:text-white tracking-light text-[32px] font-bold leading-tight truncate">$456,900</p>
+<div class="flex gap-1">
+<p class="text-slate-500 dark:text-[#ad92c9] text-base font-normal leading-normal">Last 30 Days</p>
+<p class="text-[#0bda73] text-base font-medium leading-normal">+12.5%</p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+<svg fill="none" height="148" preserveaspectratio="none" viewbox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chart-gradient-area" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#7f13ec" stop-opacity="0.4"></stop>
+<stop offset="1" stop-color="#7f13ec" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="chart-gradient-line" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#8A2BE2;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#4A90E2;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chart-gradient-area)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="url(#chart-gradient-line)" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="flex justify-around">
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 1</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 2</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 3</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 4</p>
+</div>
+</div>
+</div>
+<!-- Transaction Distribution Chart -->
+<div class="flex w-full flex-col gap-2 rounded-xl border border-slate-200 dark:border-[#4d3267] bg-white dark:bg-[#20152d] p-6">
+<p class="text-slate-800 dark:text-white text-base font-medium leading-normal">Transaction Distribution</p>
+<div class="flex min-h-[220px] flex-1 items-center justify-center gap-6 py-4">
+<svg class="transform -rotate-90" height="150" viewbox="0 0 36 36" width="150">
+<circle class="stroke-slate-200 dark:stroke-[#362348]" cx="18" cy="18" fill="none" r="15.9154943092" stroke-width="4"></circle>
+<circle class="stroke-[#8A2BE2]" cx="18" cy="18" fill="none" r="15.9154943092" stroke-dasharray="60, 100" stroke-width="4"></circle>
+<circle class="stroke-[#4A90E2]" cx="18" cy="18" fill="none" r="15.9154943092" stroke-dasharray="25, 100" stroke-dashoffset="-60" stroke-width="4"></circle>
+<circle class="stroke-sky-400" cx="18" cy="18" fill="none" r="15.9154943092" stroke-dasharray="15, 100" stroke-dashoffset="-85" stroke-width="4"></circle>
+</svg>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-[#8A2BE2]"></div>
+<p class="text-slate-600 dark:text-white text-sm font-medium">P2P <span class="text-slate-400 dark:text-slate-500">(60%)</span></p>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-[#4A90E2]"></div>
+<p class="text-slate-600 dark:text-white text-sm font-medium">Bill Pay <span class="text-slate-400 dark:text-slate-500">(25%)</span></p>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-sky-400"></div>
+<p class="text-slate-600 dark:text-white text-sm font-medium">Merchant <span class="text-slate-400 dark:text-slate-500">(15%)</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- User Growth Chart -->
+<div class="flex w-full flex-col gap-2 rounded-xl border border-slate-200 dark:border-[#4d3267] bg-white dark:bg-[#20152d] p-6">
+<p class="text-slate-800 dark:text-white text-base font-medium leading-normal">User Growth</p>
+<p class="text-slate-900 dark:text-white tracking-light text-[32px] font-bold leading-tight truncate">12,345</p>
+<div class="flex gap-1">
+<p class="text-slate-500 dark:text-[#ad92c9] text-base font-normal leading-normal">Last 30 Days</p>
+<p class="text-[#0bda73] text-base font-medium leading-normal">+8.2%</p>
+</div>
+<div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3 pt-4">
+<div class="w-full rounded-t bg-gradient-to-t from-[#4A90E2] to-[#8A2BE2]" style="height: 80%;"></div>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 1</p>
+<div class="w-full rounded-t bg-gradient-to-t from-[#4A90E2] to-[#8A2BE2]" style="height: 40%;"></div>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 2</p>
+<div class="w-full rounded-t bg-gradient-to-t from-[#4A90E2] to-[#8A2BE2]" style="height: 30%;"></div>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 3</p>
+<div class="w-full rounded-t bg-gradient-to-t from-[#4A90E2] to-[#8A2BE2]" style="height: 90%;"></div>
+<p class="text-slate-500 dark:text-[#ad92c9] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 4</p>
+</div>
+</div>
+<!-- Peak Hours Heatmap -->
+<div class="flex w-full flex-col gap-4 rounded-xl border border-slate-200 dark:border-[#4d3267] bg-white dark:bg-[#20152d] p-6">
+<p class="text-slate-800 dark:text-white text-base font-medium leading-normal">Peak Hours Heatmap</p>
+<div class="grid grid-cols-7 gap-1.5 pt-2">
+<div class="h-6 w-full rounded bg-primary/10"></div>
+<div class="h-6 w-full rounded bg-primary/20"></div>
+<div class="h-6 w-full rounded bg-primary/30"></div>
+<div class="h-6 w-full rounded bg-primary/50"></div>
+<div class="h-6 w-full rounded bg-primary/80"></div>
+<div class="h-6 w-full rounded bg-primary"></div>
+<div class="h-6 w-full rounded bg-primary/80"></div>
+<div class="h-6 w-full rounded bg-primary/20"></div>
+<div class="h-6 w-full rounded bg-primary/30"></div>
+<div class="h-6 w-full rounded bg-primary/60"></div>
+<div class="h-6 w-full rounded bg-primary"></div>
+<div class="h-6 w-full rounded bg-primary/80"></div>
+<div class="h-6 w-full rounded bg-primary/50"></div>
+<div class="h-6 w-full rounded bg-primary/30"></div>
+<div class="h-6 w-full rounded bg-primary/40"></div>
+<div class="h-6 w-full rounded bg-primary/70"></div>
+<div class="h-6 w-full rounded bg-primary"></div>
+<div class="h-6 w-full rounded bg-primary/90"></div>
+<div class="h-6 w-full rounded bg-primary/60"></div>
+<div class="h-6 w-full rounded bg-primary/40"></div>
+<div class="h-6 w-full rounded bg-primary/20"></div>
+</div>
+<div class="grid grid-cols-7 gap-1.5 text-center">
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Mon</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Tue</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Wed</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Thu</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Fri</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Sat</p>
+<p class="text-slate-500 dark:text-[#ad92c9] text-xs font-bold">Sun</p>
+</div>
+</div>
+</div>
+<!-- Button Group -->
+<div class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 mt-4 border-t border-slate-200 dark:border-[#4d3267]">
+<div class="flex flex-col items-stretch gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] w-full">
+<span class="truncate">Export Report</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-slate-200 dark:bg-[#362348] text-slate-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em] w-full">
+<span class="truncate">Print</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

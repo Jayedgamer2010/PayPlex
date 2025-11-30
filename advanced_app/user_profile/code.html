@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2ECC71",
+              "background-light": "#F9FAFB",
+              "background-dark": "#111827",
+              "text-light": "#1F2937",
+              "text-dark": "#F9FAFB",
+              "text-secondary-light": "#6B7280",
+              "text-secondary-dark": "#9CA3AF",
+              "destructive": "#EF4444"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0">
+<div class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Profile</h2>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container mt-4">
+<div class="flex w-full flex-col items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32" data-alt="User profile picture of Jayed Sheikh" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrQl0P-IYpXm6_HUc2PIb0UbqVgCLdeJlVR9QUUVm-tmEExeB0UHsygRnkV7JShLZ6a0r1RKKE-QGhEYUGjUVTHfbKMc0Ar_e1I75fQqh9GIIJkQCjedKC_Nqcgl-RH2NdJIfPG_LYdAXsIBkL6_-SaPa4Y_P_62pmS5Ed4cr9FCopir-kidoZqnolaxYJxh48mKjdY_Ftzp03NjeRFcbKeI5wj6GhUtQZ0nRQNZyIFVYcdQsDoPnQmQjyYdrxdi2ypcqlpx8oDGMo");'></div>
+<button class="absolute bottom-0 right-0 flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full border-4 border-background-light dark:border-background-dark bg-primary text-white">
+<span class="material-symbols-outlined !text-xl">edit</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Jayed Sheikh</p>
+<p class="text-base font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">jayed.sheikh@email.com</p>
+</div>
+</div>
+</div>
+<!-- Menu List -->
+<div class="flex flex-col gap-1 p-4">
+<!-- List Item: Account Details -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">Account Details</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Linked Banks -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">Linked Banks</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Security -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">Security</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Notifications -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">Notifications</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<hr class="my-4 border-gray-200 dark:border-gray-700"/>
+<!-- List Item: Help & Support -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">Help &amp; Support</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: About -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-text-light dark:text-text-dark">About</p>
+</div>
+<div class="shrink-0 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Log Out -->
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-background-light dark:bg-background-dark p-3 min-h-14 justify-between transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 mt-4">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-destructive/20 text-destructive">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="flex-1 truncate text-base font-medium leading-normal text-destructive">Log Out</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>
