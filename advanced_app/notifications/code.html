@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-3 justify-between sticky top-0 z-10">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white flex-1">Notifications</h1>
+<div class="flex items-center justify-end">
+<button class="flex items-center justify-center size-10 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">done_all</span>
+</button>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col px-4 pt-2 pb-4 space-y-3">
+<!-- Notification Item: Payment Received (Unread) -->
+<div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-blue-500 shrink-0"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400">arrow_downward</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-800 dark:text-slate-100 text-base font-semibold leading-normal line-clamp-1">Payment Received</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">You received $50.00 from Jane Smith.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">10m ago</p></div>
+</div>
+<!-- Notification Item: Payment Sent -->
+<div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-transparent shrink-0"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-red-600 dark:text-red-400">arrow_upward</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-800 dark:text-slate-100 text-base font-semibold leading-normal line-clamp-1">Payment Sent</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">You sent $25.00 to Coffee Shop.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">1h ago</p></div>
+</div>
+<!-- Notification Item: Special Offer (Unread) -->
+<div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-blue-500 shrink-0"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-purple-600 dark:text-purple-400">redeem</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-800 dark:text-slate-100 text-base font-semibold leading-normal line-clamp-1">Special Offer Unlocked</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Get 10% cashback on your next purchase.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">Yesterday</p></div>
+</div>
+<!-- Notification Item: Security Alert -->
+<div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm">
+<div class="w-1.5 h-1.5 mt-2 rounded-full bg-transparent shrink-0"></div>
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/50 shrink-0 size-10">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400">shield</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-800 dark:text-slate-100 text-base font-semibold leading-normal line-clamp-1">Security Alert</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">A new device was used to log into your account.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">2 days ago</p></div>
+</div>
+</div>
+</div>
+</body></html>

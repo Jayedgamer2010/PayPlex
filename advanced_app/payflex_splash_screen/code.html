@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PayFlex - Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark">
+<div class="relative flex h-screen min-h-screen w-full flex-col bg-gradient-to-b from-[#6A3093] to-[#A044FF] dark group/design-root overflow-hidden font-display" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex flex-1 flex-col items-center justify-center p-6">
+<!-- Centered Content Wrapper -->
+<div class="flex flex-col items-center">
+<!-- Circular Logo Container -->
+<div class="flex h-32 w-32 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+<div class="flex h-24 w-24 items-center justify-center rounded-full bg-white/30">
+<span class="material-symbols-outlined text-6xl text-white" data-icon="payments">payments</span>
+</div>
+</div>
+<!-- App Name -->
+<h1 class="text-white tracking-light text-[40px] font-bold leading-tight pt-8 pb-3 text-center">PayFlex</h1>
+</div>
+</div>
+<!-- Tagline at the bottom -->
+<div class="w-full pb-12 pt-4 px-4">
+<p class="text-white/80 text-lg font-normal leading-normal text-center">Send Money Instantly</p>
+</div>
+</div>
+</body></html>

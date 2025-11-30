@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirm Payment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<main class="flex flex-1 flex-col pb-6">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Confirm Payment</h2>
+<div class="flex w-12 items-center justify-end">
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container mt-4">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24" data-alt="Profile picture of John Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz3pQcg3Dl8TLyTFKEo3Y6nMWDZlWhYrlextzGgM1VrtN2msBBM7-lEP8HE9-DufaIFKHLKR8k5SlbYwtelBFLnCYGMBusJGgEvgu9lzDsrpotjQWWCrCdmOshHvMtKpxXPwQR2R7HnTw5sAE886_jRxG14ZgrtzaOoYMRc31o2GkH0O25Xurg-RCvOUAnQblk4IR8DdeWrvWdyzOwmaCWiSngTwbQy0Zau2uC4K6_oP36mYxV4Tp-dwqHtb4FZhnPGAlgAtHkXYQ-");'></div>
+<p class="text-slate-900 dark:text-slate-50 text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Sending to John Doe</p>
+</div>
+</div>
+</div>
+<!-- Headline Text / Amount -->
+<h1 class="text-slate-900 dark:text-slate-50 tracking-tight text-5xl font-bold leading-tight px-4 text-center pb-3 pt-4">$150.00</h1>
+<!-- Details Section -->
+<div class="p-4 mx-4 bg-white dark:bg-slate-800/50 rounded-xl mt-6">
+<!-- Description List -->
+<div class="flex justify-between gap-x-6 py-2.5 border-b border-slate-200 dark:border-slate-700">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">From</p>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-right">My Wallet</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2.5 border-b border-slate-200 dark:border-slate-700">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Fee</p>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal text-right">$0.00</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2.5">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-bold leading-normal">Total</p>
+<p class="text-slate-900 dark:text-slate-50 text-sm font-bold leading-normal text-right">$150.00</p>
+</div>
+</div>
+<!-- List Item / Note -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 px-4 min-h-14 justify-between mx-4 rounded-xl mt-4">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">notes</span>
+</div>
+<p class="text-slate-800 dark:text-slate-200 text-base font-normal leading-normal flex-1 truncate">Dinner split</p>
+</div>
+<div class="shrink-0"><button class="text-primary text-base font-medium leading-normal">Edit</button></div>
+</div>
+<!-- Biometric Prompt -->
+<div class="flex-1"></div>
+<div class="flex flex-col items-center justify-center p-4 mt-8">
+<button class="flex h-20 w-20 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-5xl">fingerprint</span>
+</button>
+<p class="mt-4 text-base font-medium text-slate-700 dark:text-slate-300">Confirm with Touch ID</p>
+</div>
+<!-- Button Group -->
+<div class="mt-auto grid grid-cols-2 gap-4 px-4 pt-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-50 text-base font-bold leading-normal tracking-[0.015em]">Cancel</button>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">Confirm</button>
+</div>
+</main>
+</div>
+</body></html>
